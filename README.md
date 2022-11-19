@@ -27,6 +27,12 @@ wol4containers takes advantage of Guacamole's WOL feature, which now allows you 
 
 ## Guacamole config
 
+The following screenshot shows example values for the Guacamole connection configuration.  For Docker containers, it is recommended that you run wol4containers on the Docker host, to minimize mischief.  This means being able to target the loopback IP range, where your broadcast address would be 127.0.0.255.  
+
+![Guacamole config](images/guacamole-wol-config.png)
+
+Since "normal" WOL services typically use ports 6, 7, or 9, you can employ a different port (above example uses port 10).  Note: older versions of Guacamole do not provide the option to use a port other than 9.
+
 ## To do
 
 * Create systemd config for automatically starting/stopping wol4containers as a service
